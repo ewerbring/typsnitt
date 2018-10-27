@@ -57,7 +57,7 @@ function heightForCharacter(character) {
     } else if(zero.includes(character)){
         height = 0;
     } else {
-        console.log("UNSUPPORTED CHARACTER FAIL FAIL FAIL: " + character);
+        console.error("UNSUPPORTED CHARACTER FAIL FAIL FAIL: " + character);
     }
 
     // if (character == 'a') {
