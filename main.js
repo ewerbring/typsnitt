@@ -39,6 +39,22 @@ function getHeightForPreviousString(previousString) {
     return totalHeight;
 }
 
+$("textarea[name=txt]").keypress(function(e){
+    var keycode =  e.keyCode ? e.keyCode : e.which;
+
+    if(keycode == 8){ // backspace
+        // do somethiing
+        alert(keycode);
+    }
+
+    if(keycode == 46){ // delete
+        // do somethiing
+        alert(keycode);
+    } 
+
+});
+
+
 function heightForCharacter(character) {
     var height = 0;
     if (character == 'a') {
@@ -97,6 +113,9 @@ function heightForCharacter(character) {
         height = 2.5*fontSize;
     }
     if (character == 't') {
+        height = -fontSize;
+    }
+     if (character == 'w') {
         height = -fontSize;
     }
     if (character == 'x') {
