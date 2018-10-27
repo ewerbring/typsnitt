@@ -21,6 +21,13 @@ $(document).keyup(function(e) {
     printedString = printedString + e.key;
 });
 
+function removeLatestDivFromContainer(){
+    //hitta container
+    //plocka bort senaste Div taggen
+    //ta bort sista bokstaven i printage string
+}
+
+
 function getHeightForPreviousString(previousString) {
     //a angled up
     //d straight right 
@@ -57,10 +64,10 @@ $("textarea[name=txt]").keypress(function(e){
 
 function heightForCharacter(character) {
     var height = 0;
-    var twoPointFive = ['c', 'g', 's', 'v'];
+    var twoPointFive = ['c', 'g', 's','n'];
     var negativeTwoPointFive = ['k', 'l', 't', 'y'];
     var one = ['i', 'm', 'r'];
-    var negativeOne = ['a', 'e', 'h', 'j', 'n', 'o', 'u', 't', 'x', 'z'];
+    var negativeOne = ['a', 'e', 'h', 'j', 'o', 'u', 't', 'x', 'z'];
     var onePointFive = ['q'];
     var zero = ['b','w','p','d','f'];
     console.log('character: ' + character);
