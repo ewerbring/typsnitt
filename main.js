@@ -4,7 +4,11 @@ var printedString = "";
 
 var fontSize = 40;
 
-$(document).keypress(function(e) {
+$(document).keyup(function(e) {
+    if (e.keyCode ==8){
+        console.log(e.keyCode);
+        return;
+    }
     //when key is pressed, add new letter to site
     var container = document.querySelector(".coolio");
     var newDiv = document.createElement("DIV");
@@ -124,30 +128,6 @@ function heightForCharacter(character) {
     // if (character == 't') {
     //     height = 2.5*(-fontSize);
     // }
-     
-<<<<<<< HEAD
-    if (character == 'u') {
-        height = -fontSize;
-    }
-    if (character == 'v') {
-        height = 2.5*fontSize;
-    }
-    if (character == 't') {
-        height = -fontSize;
-    }
-     if (character == 'w') {
-        height = -fontSize;
-    }
-    if (character == 'x') {
-        height = -fontSize;
-    }
-    if (character == 'y') {
-        height = 2.5*(-fontSize);
-    }
-    if (character == 'z') {
-        height = -fontSize;
-    }
-=======
     // if (character == 'u') {
     //     height = -fontSize;
     // }
@@ -166,7 +146,6 @@ function heightForCharacter(character) {
     // if (character == 'z') {
     //     height = -fontSize;
     // }
->>>>>>> 4dcc616a905648ceb248a8f239b5ae4189c3ba2d
 
     return height;
 }
