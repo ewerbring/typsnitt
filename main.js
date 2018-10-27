@@ -1,10 +1,6 @@
-function lol() {
-    for (var i = 0; i <= 20; i++) {
-        console.log(i);
-    }
-}
 
-var printedString = "asdasd";
+
+var printedString = "";
 
 var fontSize = 40;
 
@@ -57,55 +53,79 @@ $("textarea[name=txt]").keypress(function(e){
 
 function heightForCharacter(character) {
     var height = 0;
-    if (character == 'a') {
-        height = -fontSize;
-     }
-    if (character == 'c') {
-        height = 2.5*fontSize;
-    }
-      if (character == 'e') {
-        height = -fontSize;
-    }
-    if (character == 'g') {
-        height = 2.5*fontSize;
-    }
-      if (character == 'h') {
-        height = -fontSize;
-    }
-       if (character == 'i') {
+    var twoPointFive = ['c', 'g', 's', 'v'];
+    var negativeTwoPointFive = ['k', 'l', 't', 'y'];
+    var one = ['i', 'm', 'r'];
+    var negativeOne = ['a', 'e', 'h', 'j', 'n', 'o', 'u', 't', 'x', 'z'];
+    var onePointFive = ['q'];
+    var zero = ['b','w','p','d','f'];
+    console.log('character: ' + character);
+    if (twoPointFive.includes(character)){
+        height = 2.5* fontSize;
+    } else if (negativeTwoPointFive.includes(character)) {
+        height = 2.5* fontSize * (-1);
+    } else if (one.includes(character)) {
         height = fontSize;
-    }
-       if (character == 'j') {
+    } else if (negativeOne.includes(character)){
         height = -fontSize;
+    } else if (onePointFive.includes(character)){
+        height = 1.5 * fontSize;
+    } else if(zero.includes(character)){
+        height = 0;
+    } else {
+        console.error("UNSUPPORTED CHARACTER FAIL FAIL FAIL: " + character);
     }
-       if (character == 'k') {
-        height = 2.5*(-fontSize);
-    }
-       if (character == 'l') {
-        height = 2.5*(-fontSize);
-    }
-     if (character == 'm') {
-        height = fontSize;
-    }
-      if (character == 'n') {
-        height = -fontSize;
-    }
-      if (character == 'o') {
-        height = -fontSize;
-    }
-      if (character == 'q') {
-        height = 1.5*fontSize;
-    }
-    if (character == 'r') {
-        height = fontSize;
-    }
-    if (character == 's') {
-        height = 2.5*fontSize;
-    }
-    if (character == 't') {
-        height = 2.5*(-fontSize);
-    }
+
+    // if (character == 'a') {
+    //     height = -fontSize;
+    //  }
+    // if (character == 'c') {
+    //     height = 2.5*fontSize;
+    // }
+    //   if (character == 'e') {
+    //     height = -fontSize;
+    // }
+    // if (character == 'g') {
+    //     height = 2.5*fontSize;
+    // }
+    //   if (character == 'h') {
+    //     height = -fontSize;
+    // }
+    //    if (character == 'i') {
+    //     height = fontSize;
+    // }
+    //    if (character == 'j') {
+    //     height = -fontSize;
+    // }
+    //    if (character == 'k') {
+    //     height = 2.5*(-fontSize);
+    // }
+    //    if (character == 'l') {
+    //     height = 2.5*(-fontSize);
+    // }
+    //  if (character == 'm') {
+    //     height = fontSize;
+    // }
+    //   if (character == 'n') {
+    //     height = -fontSize;
+    // }
+    //   if (character == 'o') {
+    //     height = -fontSize;
+    // }
+    //   if (character == 'q') {
+    //     height = 1.5*fontSize;
+    // }
+    // if (character == 'r') {
+    //     height = fontSize;
+    // }
+    // if (character == 's') {
+    //     height = 2.5*fontSize;
+    // }
+    // if (character == 't') {
+    //     height = 2.5*(-fontSize);
+    // }
      
+<<<<<<< HEAD
     if (character == 'u') {
         height = -fontSize;
     }
@@ -127,6 +147,26 @@ function heightForCharacter(character) {
     if (character == 'z') {
         height = -fontSize;
     }
+=======
+    // if (character == 'u') {
+    //     height = -fontSize;
+    // }
+    // if (character == 'v') {
+    //     height = 2.5*fontSize;
+    // }
+    // if (character == 't') {
+    //     height = -fontSize;
+    // }
+    // if (character == 'x') {
+    //     height = -fontSize;
+    // }
+    // if (character == 'y') {
+    //     height = 2.5*(-fontSize);
+    // }
+    // if (character == 'z') {
+    //     height = -fontSize;
+    // }
+>>>>>>> 4dcc616a905648ceb248a8f239b5ae4189c3ba2d
 
     return height;
 }
