@@ -1,0 +1,22 @@
+@font-face {
+    font-family: Artofsecret;
+    src: url("Artofsecret-italic.otf") format("opentype");
+}
+
+.coolio {
+    font-family: "Artofsecret";
+    font-size: 40px;
+}
+
+.test1 {
+    top: 50px;
+}
+.test2 {
+
+}
+.test3 {
+
+}
+.test4 {
+
+}
