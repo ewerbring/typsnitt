@@ -43,7 +43,29 @@ function heightForCharacter(character) {
     var height = 0;
     if (character == 'a') {
         height = -fontSize;
+     }
+    if (character == 'c') {
+        height = fontSize;
     }
+      if (character == 'e') {
+        height = -fontSize;
+    }
+      if (character == 'h') {
+        height = -fontSize;
+    }
+       if (character == 'i') {
+        height = -fontSize;
+    }
+       if (character == 'j') {
+        height = -fontSize;
+    }
+       if (character == 'k') {
+        height = -fontSize;
+    }
+       if (character == 'l') {
+        height = 2.5*(-fontSize);
+    }
+
 
     return height;
 }
