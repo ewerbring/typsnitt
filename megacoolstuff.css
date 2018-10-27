@@ -11,14 +11,13 @@
 }
 
 .test1 {
-    top: 50px;
     display: inline;
     position: relative;
 
 }
 
 .test2 {
-    top: -50px;
+    top: -40px;
     display: inline;
     position: relative;
 }
