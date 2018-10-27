@@ -18,7 +18,9 @@
 }
 
 .test2 {
+    top: -50px;
     display: inline;
+    position: relative;
 }
 
 .test3 {
