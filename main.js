@@ -45,27 +45,69 @@ function heightForCharacter(character) {
         height = -fontSize;
      }
     if (character == 'c') {
-        height = fontSize;
+        height = 2.5*fontSize;
     }
       if (character == 'e') {
         height = -fontSize;
+    }
+    if (character == 'g') {
+        height = 2.5*fontSize;
     }
       if (character == 'h') {
         height = -fontSize;
     }
        if (character == 'i') {
-        height = -fontSize;
+        height = fontSize;
     }
        if (character == 'j') {
         height = -fontSize;
     }
        if (character == 'k') {
-        height = -fontSize;
+        height = 2.5*(-fontSize);
     }
        if (character == 'l') {
         height = 2.5*(-fontSize);
     }
-
+     if (character == 'm') {
+        height = fontSize;
+    }
+      if (character == 'n') {
+        height = -fontSize;
+    }
+      if (character == 'o') {
+        height = -fontSize;
+    }
+      if (character == 'q') {
+        height = 1.5*fontSize;
+    }
+    if (character == 'r') {
+        height = fontSize;
+    }
+    if (character == 's') {
+        height = 2.5*fontSize;
+    }
+    if (character == 't') {
+        height = 2.5*(-fontSize);
+    }
+     
+    if (character == 'u') {
+        height = -fontSize;
+    }
+    if (character == 'v') {
+        height = 2.5*fontSize;
+    }
+    if (character == 't') {
+        height = -fontSize;
+    }
+    if (character == 'x') {
+        height = -fontSize;
+    }
+    if (character == 'y') {
+        height = 2.5*(-fontSize);
+    }
+    if (character == 'z') {
+        height = -fontSize;
+    }
 
     return height;
 }
