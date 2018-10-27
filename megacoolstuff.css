@@ -6,17 +6,22 @@
 .coolio {
     font-family: "Artofsecret";
     font-size: 40px;
+    display: inline;
 }
 
 .test1 {
     top: 50px;
+    display: inline;
 }
+
 .test2 {
-
+    display: inline;
 }
+
 .test3 {
-
+    display: inline;
 }
-.test4 {
 
+.test4 {
+    display: inline;
 }
