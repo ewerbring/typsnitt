@@ -1,4 +1,4 @@
 function lol(){
-    alert("TEST");
-    
+    alert("TEST");   
 }
+
