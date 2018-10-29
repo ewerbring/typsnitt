@@ -8,9 +8,10 @@
     font-family: "Artofsecret";
     font-size: 40px;
     color: blue;
-    background-color: pink; 
+    background-color: skyblue; 
     display: inline;
     position: relative
+    width: 50%;
 }
 
 .test1 {
