@@ -4,13 +4,14 @@
 }
 
 .coolio {
-    top: 800px;
+    top: 300px;
     font-family: "Artofsecret";
     font-size: 40px;
     color: blue;
     background-color: pink; 
     display: inline;
-    position: relative
+    position: relative;
+        word-wrap: break-word;
 }
 
 .test1 {
