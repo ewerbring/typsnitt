@@ -20,7 +20,6 @@ $(document).keyup(function(e) {
     console.log("pressed: " + e.key);
     printedString = printedString + e.key;
 
-    var container = document.querySelector(".imagecoolio")
 });
 
 
@@ -73,7 +72,7 @@ function heightForCharacter(character) {
     var one = ['i', 'm','M', 'r'];
     var negativeOne = ['a', 'e', 'h', 'j', 'o', 'u', 't', 'x', 'z'];
     var onePointFive = ['q'];
-    var zero = ['b','w','p','d','f'];
+    var zero = ['b','w','p','d','f',' '];
     console.log('character: ' + character);
     if (twoPointFive.includes(character)){
         height = 2.5* fontSize;
