@@ -24,6 +24,7 @@ $(document).keyup(function(e) {
         elementToAdd = elementForNumber(e.keyCode);
     } else {
         console.log("UNSUPPORTED char:" + e.keyCode);
+        //return;
     }
 
     //add the element we got for the key.
@@ -56,6 +57,7 @@ function elementForLetter(e){
 
 function elementForNumber(keyCode){
         var newImg = document.createElement("IMG");
+        //bestäm rätt source file baserat på rätt knapp.
         newImg.src = "1.JPG";
         newImg.className = "imageCoolio";
         return newImg;
@@ -104,6 +106,11 @@ function heightForCharacter(character) {
     var negativeOne = ['a', 'e', 'h', 'j', 'o', 'u', 't', 'x', 'z'];
     var onePointFive = ['q'];
     var zero = ['b','w','p','d','f',' '];
+
+    //lägg till höjd för siffror. 
+
+
+
     if (twoPointFive.includes(character)){
         height = 2.5* fontSize;
     } else if (negativeTwoPointFive.includes(character)) {
