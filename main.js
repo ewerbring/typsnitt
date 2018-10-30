@@ -22,17 +22,6 @@ $(document).keyup(function(e) {
 });
 
 
-$(document).ready(function(){
-    var letters = ['0', '1', '2','3','4', '5', '6','7','8', '9'];
-    letters = letters.split("");
-    
-    $(window).keydown(function(e){
-        key = e.which - 65; //makes a-z = 0-27
-        key = letters[key];
-        $('img[src="' + key + '.jpg"]').show();
-    });
-});
-
 function removeLatestDivFromContainer(){
     //hitta container
     //plocka bort senaste Div taggen
@@ -82,7 +71,6 @@ function heightForCharacter(character) {
     var one = ['i', 'm','M', 'r'];
     var negativeOne = ['a', 'e', 'h', 'j', 'o', 'u', 't', 'x', 'z'];
     var onePointFive = ['q'];
-    var imageHigh = ['0', '1', '2','3','4', '5', '6','7','8', '9'];
     var zero = ['b','w','p','d','f'];
     console.log('character: ' + character);
     if (twoPointFive.includes(character)){
