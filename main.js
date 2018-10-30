@@ -19,6 +19,8 @@ $(document).keyup(function(e) {
     //position said letter correctly
     console.log("pressed: " + e.key);
     printedString = printedString + e.key;
+
+    var container = document.querySelector(".imagecoolio")
 });
 
 
@@ -83,8 +85,6 @@ function heightForCharacter(character) {
         height = -fontSize;
     } else if (onePointFive.includes(character)){
         height = 1.5 * fontSize;
-    } else if (imageHigh.includes(character)){
-        height = 2.5 * fontSize;
     } else if(zero.includes(character)){
         height = 0;
     } else {

@@ -14,16 +14,6 @@
 }
 
 .imagecoolio {
-    font-family: "Artofsecret";
-    font-size: 40px;
-    color: blue;
-    background-color: skyblue; 
-    display: inline;
-    position: relative;
-        word-wrap: break-word;
-}
-
-img{
     height: 100px;
     width: 100px;
     border: 1px solid black;
