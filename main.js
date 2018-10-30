@@ -22,15 +22,6 @@ $(document).keyup(function(e) {
 
 });
 
-
-function removeLatestDivFromContainer(){
-    //hitta container
-    //plocka bort senaste Div taggen
-    //ta bort sista bokstaven i printage string
-}
-
-
-
 function getHeightForPreviousString(previousString) {
     //a angled up
     //d straight right 
@@ -73,7 +64,6 @@ function heightForCharacter(character) {
     var negativeOne = ['a', 'e', 'h', 'j', 'o', 'u', 't', 'x', 'z'];
     var onePointFive = ['q'];
     var zero = ['b','w','p','d','f',' '];
-    console.log('character: ' + character);
     if (twoPointFive.includes(character)){
         height = 2.5* fontSize;
     } else if (negativeTwoPointFive.includes(character)) {
@@ -89,73 +79,6 @@ function heightForCharacter(character) {
     } else {
         console.error("UNSUPPORTED CHARACTER FAIL FAIL FAIL: " + character);
     }
-
-    // if (character == 'a') {
-    //     height = -fontSize;
-    //  }
-    // if (character == 'c') {
-    //     height = 2.5*fontSize;
-    // }
-    //   if (character == 'e') {
-    //     height = -fontSize;
-    // }
-    // if (character == 'g') {
-    //     height = 2.5*fontSize;
-    // }
-    //   if (character == 'h') {
-    //     height = -fontSize;
-    // }
-    //    if (character == 'i') {
-    //     height = fontSize;
-    // }
-    //    if (character == 'j') {
-    //     height = -fontSize;
-    // }
-    //    if (character == 'k') {
-    //     height = 2.5*(-fontSize);
-    // }
-    //    if (character == 'l') {
-    //     height = 2.5*(-fontSize);
-    // }
-    //  if (character == 'm') {
-    //     height = fontSize;
-    // }
-    //   if (character == 'n') {
-    //     height = -fontSize;
-    // }
-    //   if (character == 'o') {
-    //     height = -fontSize;
-    // }
-    //   if (character == 'q') {
-    //     height = 1.5*fontSize;
-    // }
-    // if (character == 'r') {
-    //     height = fontSize;
-    // }
-    // if (character == 's') {
-    //     height = 2.5*fontSize;
-    // }
-    // if (character == 't') {
-    //     height = 2.5*(-fontSize);
-    // }
-    // if (character == 'u') {
-    //     height = -fontSize;
-    // }
-    // if (character == 'v') {
-    //     height = 2.5*fontSize;
-    // }
-    // if (character == 't') {
-    //     height = -fontSize;
-    // }
-    // if (character == 'x') {
-    //     height = -fontSize;
-    // }
-    // if (character == 'y') {
-    //     height = 2.5*(-fontSize);
-    // }
-    // if (character == 'z') {
-    //     height = -fontSize;
-    // }
 
     return height;
 }
