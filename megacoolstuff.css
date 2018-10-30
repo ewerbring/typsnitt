@@ -19,23 +19,3 @@
     border: 1px solid black;
     margin: 10px;
 }
-
-.test1 {
-    display: inline;
-    position: relative;
-
-}
-
-.test2 {
-    top: -40px;
-    display: inline;
-    position: relative;
-}
-
-.test3 {
-    display: inline;
-}
-
-.test4 {
-    display: inline;
-}
