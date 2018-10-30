@@ -21,11 +21,24 @@ $(document).keyup(function(e) {
     printedString = printedString + e.key;
 });
 
+
+$(document).ready(function(){
+    var letters = ['0', '1', '2','3','4', '5', '6','7','8', '9'];
+    letters = letters.split("");
+    
+    $(window).keydown(function(e){
+        key = e.which - 65; //makes a-z = 0-27
+        key = letters[key];
+        $('img[src="' + key + '.jpg"]').show();
+    });
+});
+
 function removeLatestDivFromContainer(){
     //hitta container
     //plocka bort senaste Div taggen
     //ta bort sista bokstaven i printage string
 }
+
 
 
 function getHeightForPreviousString(previousString) {
@@ -64,11 +77,12 @@ $("textarea[name=txt]").keypress(function(e){
 
 function heightForCharacter(character) {
     var height = 0;
-    var twoPointFive = ['c', 'g', 's','n'];
+    var twoPointFive = ['c', 'g', 's','n','v'];
     var negativeTwoPointFive = ['k', 'l', 't', 'y'];
-    var one = ['i', 'm', 'r'];
+    var one = ['i', 'm','M', 'r'];
     var negativeOne = ['a', 'e', 'h', 'j', 'o', 'u', 't', 'x', 'z'];
     var onePointFive = ['q'];
+    var imageHigh = ['0', '1', '2','3','4', '5', '6','7','8', '9'];
     var zero = ['b','w','p','d','f'];
     console.log('character: ' + character);
     if (twoPointFive.includes(character)){
@@ -81,6 +95,8 @@ function heightForCharacter(character) {
         height = -fontSize;
     } else if (onePointFive.includes(character)){
         height = 1.5 * fontSize;
+    } else if (imageHigh.includes(character)){
+        height = 2.5 * fontSize;
     } else if(zero.includes(character)){
         height = 0;
     } else {

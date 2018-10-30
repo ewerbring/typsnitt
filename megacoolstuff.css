@@ -4,7 +4,6 @@
 }
 
 .coolio {
-    top: 300px;
     font-family: "Artofsecret";
     font-size: 40px;
     color: blue;
@@ -17,6 +16,29 @@
     position: relative;
         word-wrap: break-word;
 >>>>>>> cdb12f0e54039be2292d2da88b05402c4ed24c41
+}
+
+.imagecoolio {
+    font-family: "Artofsecret";
+    font-size: 40px;
+    color: blue;
+    background-color: skyblue; 
+    display: inline;
+<<<<<<< HEAD
+    position: relative
+    width: 50%;
+=======
+    position: relative;
+        word-wrap: break-word;
+>>>>>>> cdb12f0e54039be2292d2da88b05402c4ed24c41
+}
+
+img{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    margin: 10px;
+    display: none;
 }
 
 .test1 {
