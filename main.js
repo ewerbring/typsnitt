@@ -9,18 +9,57 @@ $(document).keyup(function(e) {
         console.log(e.keyCode);
         return;
     }
-    //when key is pressed, add new letter to site
+
+    //when key is pressed
+    //check if its a letter or a number
+
+    var keyCodeIsNumber = isKeyCodeNumber(e.keyCode);
+    var keyCodeIsLetter = isKeyCodeLetter(e.keyCode);
+    //if its a letter, add new letter to site
+    //if it s anumber, add new image
+    var elementToAdd;
+    if(keyCodeIsLetter){
+        elementToAdd = elementForLetter(e);    
+    } else if(keyCodeIsNumber){
+        elementToAdd = elementForNumber(e.keyCode);
+    } else {
+        console.log("UNSUPPORTED char:" + e.keyCode);
+    }
+
+    //add the element we got for the key.
+    
+    //if it is a number, add corresponding image to site
     var container = document.querySelector(".coolio");
-    var newDiv = document.createElement("DIV");
-    newDiv.innerHTML = e.key;
-    var topMargin = getHeightForPreviousString(printedString);
-    newDiv.style.cssText = "display:inline; position:relative;top:" + topMargin + "px;";
-    container.appendChild(newDiv);
+    var topMargin = getHeightForPreviousString(printedString);    
+    elementToAdd.style.cssText = "display:inline; position:relative;top:" + topMargin + "px;";
+    container.appendChild(elementToAdd);
     //position said letter correctly
     console.log("pressed: " + e.key);
     printedString = printedString + e.key;
-
 });
+
+function isKeyCodeNumber(keyCode){
+    var isNumber = keyCode >= 48  && keyCode <= 57; 
+    return isNumber;
+}
+
+function isKeyCodeLetter(keyCode){
+    var isNumber = keyCode >= 65  && keyCode <= 90; 
+    return isNumber;   
+}
+
+function elementForLetter(e){
+        var newDiv = document.createElement("DIV");
+        newDiv.innerHTML = e.key;
+        return newDiv;
+}
+
+function elementForNumber(keyCode){
+        var newImg = document.createElement("IMG");
+        newImg.src = "1.JPG";
+        newImg.className = "imageCoolio";
+        return newImg;
+}
 
 function getHeightForPreviousString(previousString) {
     //a angled up
@@ -78,7 +117,7 @@ function heightForCharacter(character) {
     } else if(zero.includes(character)){
         height = 0;
     } else {
-        console.error("UNSUPPORTED CHARACTER FAIL FAIL FAIL: " + character);
+        console.error("UNSUPPORTED CHARACTER in height FAIL FAIL FAIL: " + character);
     }
 
     return height;
