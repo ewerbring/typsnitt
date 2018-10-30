@@ -40,20 +40,21 @@ function getHeightForPreviousString(previousString) {
     return totalHeight;
 }
 
-$("textarea[name=txt]").keypress(function(e){
-    var keycode =  e.keyCode ? e.keyCode : e.which;
+// $("textarea[name=txt]").keypress(function(e){
+//     console.log("LOLOLOL");
+//     var keycode =  e.keyCode ? e.keyCode : e.which;
 
-    if(keycode == 8){ // backspace
-        // do somethiing
-        alert(keycode);
-    }
+//     if(keycode == 8){ // backspace
+//         // do somethiing
+//         alert(keycode);
+//     }
 
-    if(keycode == 46){ // delete
-        // do somethiing
-        alert(keycode);
-    } 
+//     if(keycode == 46){ // delete
+//         // do somethiing
+//         alert(keycode);
+//     } 
 
-});
+// });
 
 
 function heightForCharacter(character) {
