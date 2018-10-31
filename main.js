@@ -45,7 +45,8 @@ function isKeyCodeNumber(keyCode){
 }
 
 function isKeyCodeLetter(keyCode){
-    var isNumber = keyCode >= 65  && keyCode <= 90; 
+    var isNumber = keyCode >= 65 && keyCode <= 90 ; 
+    var isNumber = keyCode = 32;
     return isNumber;   
 }
 
@@ -56,11 +57,40 @@ function elementForLetter(e){
 }
 
 function elementForNumber(keyCode){
-        var newImg = document.createElement("IMG");
+        var newImg1 = document.createElement("IMG");
+        var newImg2 = document.createElement("IMG");
+        var newImg3 = document.createElement("IMG");
+        var newImg4 = document.createElement("IMG");
+  
+    if(keyCode = 48){
+        newImg = 1
+    } 
+    else if(keyCode = 49){
+        newImg = 2
+    }
+    else if(keyCode = 50){
+        newImg = 3
+    }
+    else if(keyCode = 51){
+        newImg = 4
+
+    }
+    return newImg;
+
         //bestäm rätt source file baserat på rätt knapp.
-        newImg.src = "1.JPG";
-        newImg.className = "imageCoolio";
-        return newImg;
+        newImg1.src = "1.JPG";
+        newImg1.className = "imageCoolio";
+
+        newImg2.src = "2.JPG";
+        newImg2.className = "imageCoolio";
+
+        newImg3.src = "3.JPG";
+        newImg3.className = "imageCoolio";
+
+        newImg4.src = "4.JPG";
+        newImg4.className = "imageCoolio";
+
+   
 }
 
 function getHeightForPreviousString(previousString) {
@@ -124,7 +154,7 @@ function heightForCharacter(character) {
     } else if(zero.includes(character)){
         height = 0;
     } else {
-        console.error("UNSUPPORTED CHARACTER in height FAIL FAIL FAIL: " + character);
+       // console.error("UNSUPPORTED CHARACTER in height FAIL FAIL FAIL: " + character);
     }
 
     return height;
