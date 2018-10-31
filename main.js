@@ -1,11 +1,9 @@
-
-
 var printedString = "";
 
 var fontSize = 40;
 
 $(document).keyup(function(e) {
-    if (e.keyCode ==8){
+    if (e.keyCode == 8) {
         console.log(e.keyCode);
         return;
     }
@@ -18,20 +16,21 @@ $(document).keyup(function(e) {
     //if its a letter, add new letter to site
     //if it s anumber, add new image
     var elementToAdd;
-    if(keyCodeIsLetter){
-        elementToAdd = elementForLetter(e);    
-    } else if(keyCodeIsNumber){
-        elementToAdd = elementForNumber(e.keyCode);
+    if (keyCodeIsLetter) {
+        elementToAdd = elementForLetter(e);
+    } else if (keyCodeIsNumber) {
+        console.log("firing off img");
+        elementToAdd = elementForNumber(e);
     } else {
         console.log("UNSUPPORTED char:" + e.keyCode);
         //return;
     }
 
     //add the element we got for the key.
-    
+
     //if it is a number, add corresponding image to site
     var container = document.querySelector(".coolio");
-    var topMargin = getHeightForPreviousString(printedString);    
+    var topMargin = getHeightForPreviousString(printedString);
     elementToAdd.style.cssText = "display:inline; position:relative;top:" + topMargin + "px;";
     container.appendChild(elementToAdd);
     //position said letter correctly
@@ -39,59 +38,37 @@ $(document).keyup(function(e) {
     printedString = printedString + e.key;
 });
 
-function isKeyCodeNumber(keyCode){
-    var isNumber = keyCode >= 48  && keyCode <= 57; 
+function isKeyCodeNumber(keyCode) {
+    var isNumber = keyCode >= 48 && keyCode <= 57;
     return isNumber;
 }
 
-function isKeyCodeLetter(keyCode){
-    var isNumber = keyCode >= 65 && keyCode <= 90 ; 
-    var isNumber = keyCode = 32;
-    return isNumber;   
-}
-
-function elementForLetter(e){
-        var newDiv = document.createElement("DIV");
-        newDiv.innerHTML = e.key;
-        return newDiv;
-}
-
-function elementForNumber(keyCode){
-        var newImg = document.createElement("IMG");
-        var potato2 = document.createElement("IMG");
-        var potato3 = document.createElement("IMG");
-        var potato4 = document.createElement("IMG");
-
-         //bestäm rätt source file baserat på rätt knapp.
-        newImg.src = "1.JPG";
-        newImg.className = "imageCoolio";
-
-        potato2.src = "2.JPG";
-        potato2.className = "imageCoolio";
-
-        potato3.src = "3.JPG";
-        potato3.className = "imageCoolio";
-
-        potato4.src = "4.JPG";
-        potato4.className = "imageCoolio";
-  
-
-    if(keyCode = 48){
-    return newImg;
-    } 
-
-    else if(keyCode = 49){
-    return potato2;
-    }
-
-    else if(keyCode = 50){
-    return potato3;
-    }
-
-    else if(keyCode = 51){
-    return potato4;
-    }
+function isKeyCodeLetter(keyCode) {
+    var isNumber = keyCode >= 65 && keyCode <= 90;
     
+    //var isNumber = keyCode = 32;
+    //HÄR ÄR EN LURING!!!
+    //ett lika med tecken TILLDELAR ett värde till en variabel. 
+    //FÖR ATT KOLLA " är x lika md y" behöver man TVÅ likamedtecken. 
+    //https://www.w3schools.com/js/js_comparisons.asp
+    
+    
+    return isNumber;
+}
+
+function elementForLetter(e) {
+    var newDiv = document.createElement("DIV");
+    newDiv.innerHTML = e.key;
+    return newDiv;
+}
+
+function elementForNumber(e) {
+    var newImg = document.createElement("IMG");
+    //bestäm rätt source file baserat på rätt knapp.
+    newImg.src = e.key + ".JPG";
+    newImg.className = "imageCoolio";
+    console.log(newImg);
+    return newImg;
 }
 
 function getHeightForPreviousString(previousString) {
@@ -131,31 +108,31 @@ function getHeightForPreviousString(previousString) {
 
 function heightForCharacter(character) {
     var height = 0;
-    var twoPointFive = ['c', 'g', 's','n','v'];
+    var twoPointFive = ['c', 'g', 's', 'n', 'v'];
     var negativeTwoPointFive = ['k', 'l', 't', 'y'];
-    var one = ['i', 'm','M', 'r'];
+    var one = ['i', 'm', 'M', 'r'];
     var negativeOne = ['a', 'e', 'h', 'j', 'o', 'u', 't', 'x', 'z'];
     var onePointFive = ['q'];
-    var zero = ['b','w','p','d','f',' '];
+    var zero = ['b', 'w', 'p', 'd', 'f', ' '];
 
     //lägg till höjd för siffror. 
 
 
 
-    if (twoPointFive.includes(character)){
-        height = 2.5* fontSize;
+    if (twoPointFive.includes(character)) {
+        height = 2.5 * fontSize;
     } else if (negativeTwoPointFive.includes(character)) {
-        height = 2.5* fontSize * (-1);
+        height = 2.5 * fontSize * (-1);
     } else if (one.includes(character)) {
         height = fontSize;
-    } else if (negativeOne.includes(character)){
+    } else if (negativeOne.includes(character)) {
         height = -fontSize;
-    } else if (onePointFive.includes(character)){
+    } else if (onePointFive.includes(character)) {
         height = 1.5 * fontSize;
-    } else if(zero.includes(character)){
+    } else if (zero.includes(character)) {
         height = 0;
     } else {
-       // console.error("UNSUPPORTED CHARACTER in height FAIL FAIL FAIL: " + character);
+        // console.error("UNSUPPORTED CHARACTER in height FAIL FAIL FAIL: " + character);
     }
 
     return height;
