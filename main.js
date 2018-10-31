@@ -57,40 +57,41 @@ function elementForLetter(e){
 }
 
 function elementForNumber(keyCode){
-        var newImg1 = document.createElement("IMG");
-        var newImg2 = document.createElement("IMG");
-        var newImg3 = document.createElement("IMG");
-        var newImg4 = document.createElement("IMG");
+        var newImg = document.createElement("IMG");
+        var potato2 = document.createElement("IMG");
+        var potato3 = document.createElement("IMG");
+        var potato4 = document.createElement("IMG");
+
+         //bestäm rätt source file baserat på rätt knapp.
+        newImg.src = "1.JPG";
+        newImg.className = "imageCoolio";
+
+        potato2.src = "2.JPG";
+        potato2.className = "imageCoolio";
+
+        potato3.src = "3.JPG";
+        potato3.className = "imageCoolio";
+
+        potato4.src = "4.JPG";
+        potato4.className = "imageCoolio";
   
+
     if(keyCode = 48){
-        newImg = 1
-    } 
-    else if(keyCode = 49){
-        newImg = 2
-    }
-    else if(keyCode = 50){
-        newImg = 3
-    }
-    else if(keyCode = 51){
-        newImg = 4
-
-    }
     return newImg;
+    } 
 
-        //bestäm rätt source file baserat på rätt knapp.
-        newImg1.src = "1.JPG";
-        newImg1.className = "imageCoolio";
+    else if(keyCode = 49){
+    return potato2;
+    }
 
-        newImg2.src = "2.JPG";
-        newImg2.className = "imageCoolio";
+    else if(keyCode = 50){
+    return potato3;
+    }
 
-        newImg3.src = "3.JPG";
-        newImg3.className = "imageCoolio";
-
-        newImg4.src = "4.JPG";
-        newImg4.className = "imageCoolio";
-
-   
+    else if(keyCode = 51){
+    return potato4;
+    }
+    
 }
 
 function getHeightForPreviousString(previousString) {
