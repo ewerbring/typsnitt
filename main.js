@@ -44,8 +44,8 @@ function isKeyCodeNumber(keyCode) {
 }
 
 function isKeyCodeLetter(keyCode) {
-    var isNumber = keyCode >= 65 && keyCode <= 90;
-    
+    var isNumber = keyCode >= 65 && keyCode <= 90 || keyCode==32;
+
     //var isNumber = keyCode = 32;
     //HÄR ÄR EN LURING!!!
     //ett lika med tecken TILLDELAR ett värde till en variabel. 
