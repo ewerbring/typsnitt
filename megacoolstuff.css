@@ -6,11 +6,18 @@
 .coolio {
     font-family: "Artofsecret";
     font-size: 40px;
-    color: blue;
     background-color: skyblue; 
     display: inline;
     position: relative;
-        word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.redCoolioText {
+    color: red;
+}
+
+.blueCoolioText {
+    color: blue;
 }
 
 .imageCoolio {
