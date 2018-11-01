@@ -2,7 +2,14 @@ var printedString = "";
 
 var fontSize = 40;
 
+var currentCss = "";
+
+function toggleCssForText(cssName) {
+    currentCss = cssName;
+}
+
 $(document).keyup(function(e) {
+    console.log(currentCss);
     if (e.keyCode == 8) {
         console.log(e.keyCode);
         return;
@@ -44,21 +51,22 @@ function isKeyCodeNumber(keyCode) {
 }
 
 function isKeyCodeLetter(keyCode) {
-    var isNumber = keyCode >= 65 && keyCode <= 90 || keyCode==32;
+    var isNumber = keyCode >= 65 && keyCode <= 90 || keyCode == 32;
 
     //var isNumber = keyCode = 32;
     //HÄR ÄR EN LURING!!!
     //ett lika med tecken TILLDELAR ett värde till en variabel. 
     //FÖR ATT KOLLA " är x lika md y" behöver man TVÅ likamedtecken. 
     //https://www.w3schools.com/js/js_comparisons.asp
-    
-    
+
+
     return isNumber;
 }
 
 function elementForLetter(e) {
     var newDiv = document.createElement("DIV");
     newDiv.innerHTML = e.key;
+    newDiv.className = currentCss;
     return newDiv;
 }
 
