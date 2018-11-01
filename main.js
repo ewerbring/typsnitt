@@ -9,9 +9,9 @@ function toggleCssForText(cssName) {
 }
 
 $(document).keyup(function(e) {
-    console.log(currentCss);
+    console.log();
     if (e.keyCode == 8) {
-        console.log(e.keyCode);
+        console.log();
         return;
     }
 
@@ -26,7 +26,7 @@ $(document).keyup(function(e) {
     if (keyCodeIsLetter) {
         elementToAdd = elementForLetter(e);
     } else if (keyCodeIsNumber) {
-        console.log("firing off img");
+        console.log("");
         elementToAdd = elementForNumber(e);
     } else {
         console.log("UNSUPPORTED char:" + e.keyCode);
