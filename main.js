@@ -72,7 +72,9 @@ function elementForLetter(e) {
 
 function elementForNumber(e) {
     var newImg = document.createElement("IMG");
+  
     //bestäm rätt source file baserat på rätt knapp.
+
     newImg.src = e.key + ".JPG";
     newImg.className = "imageCoolio";
     console.log(newImg);
@@ -116,23 +118,23 @@ function getHeightForPreviousString(previousString) {
 
 function heightForCharacter(character) {
     var height = 0;
-    var twoPointFive = ['c', 'g', 's', 'n', 'v'];
-    var negativeTwoPointFive = ['k', 'l', 't', 'y'];
-    var one = ['i', 'm', 'M', 'r'];
-    var negativeOne = ['a', 'e', 'h', 'j', 'o', 'u', 't', 'x', 'z'];
-    var onePointFive = ['q'];
-    var zero = ['b', 'w', 'p', 'd', 'f', ' '];
+    var twoPointFive = ['a','å', 'ä', 'ö','h', 'j', 'k',];
+    var negativeTwoPointFive = ['i', 'y'];
+    var one = ['f', 'l', 'm', 'n', 's','x', 'z'];
+    var negativeOne = ['b', 'c', 'd', 'e', 'g', 'p', 't', 'v'];
+    var onePointFive = [];
+    var zero = ['q', 'r', 'w', 'u'];
 
     //lägg till höjd för siffror. 
 
 
 
     if (twoPointFive.includes(character)) {
-        height = 2.5 * fontSize;
+        height = 2.7 * fontSize;
     } else if (negativeTwoPointFive.includes(character)) {
         height = 2.5 * fontSize * (-1);
     } else if (one.includes(character)) {
-        height = fontSize;
+        height = 1.7 * fontSize;
     } else if (negativeOne.includes(character)) {
         height = -fontSize;
     } else if (onePointFive.includes(character)) {

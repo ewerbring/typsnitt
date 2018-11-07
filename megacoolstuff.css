@@ -1,12 +1,17 @@
 @font-face {
     font-family: Artofsecret;
-    src: url("Artofsecret-mixed.otf") format("opentype");
+    src: url("Artofsecret-mixedorganized.otf") format("opentype");
+}
+
+body {
+    background-color: black;
 }
 
 .coolio {
     font-family: "Artofsecret";
     font-size: 40px;
-    background-color: skyblue; 
+    color: lime;
+    background-color: violet; 
     display: inline;
     position: relative;
     word-wrap: break-word;
