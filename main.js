@@ -7,6 +7,16 @@ var currentCss = "";
 function toggleCssForText(cssName) {
     currentCss = cssName;
 }
+;
+
+function check_multifile_logo(file) {
+    var extension = file.substr((file.lastIndexOf('.') + 1))
+    if (extension === 'jpg' || extension === 'jpeg' || extension === 'gif' || extension === 'png' || extension === 'bmp') {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 $(document).keyup(function(e) {
     console.log();
@@ -51,7 +61,13 @@ function isKeyCodeNumber(keyCode) {
 }
 
 function isKeyCodeLetter(keyCode) {
-    var isNumber = keyCode >= 65 && keyCode <= 90 || keyCode == 32 || keyCode == 190 || keyCode == 222 || keyCode == 186 || keyCode == 219;
+    var isNumber = keyCode >= 65 && keyCode <= 90 
+    || keyCode == 32 
+    || keyCode == 190 
+    || keyCode == 222 
+    || keyCode == 186 
+    || keyCode == 187
+    || keyCode == 107;
 
     //var isNumber = keyCode = 32;
     //HÄR ÄR EN LURING!!!
@@ -124,6 +140,8 @@ function heightForCharacter(character) {
     var negativeOne = ['b', 'c', 'd', 'e', 'g', 'p', 't', 'v'];
     var onePointFive = [];
     var zero = ['q', 'r', 'w', 'u','.'];
+    var negativeJump = ['+'];
+    var positiveJump = ['='];
 
     //lägg till höjd för siffror. 
 
@@ -135,6 +153,10 @@ function heightForCharacter(character) {
         height = 2.5 * fontSize * (-1);
     } else if (one.includes(character)) {
         height = 1.7 * fontSize;
+    } else if (negativeJump.includes(character)) {
+        height = 8 * fontSize;
+    } else if (positiveJump.includes(character)) {
+        height = 8 * -fontSize;
     } else if (negativeOne.includes(character)) {
         height = -fontSize;
     } else if (onePointFive.includes(character)) {

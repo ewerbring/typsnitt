@@ -2,10 +2,16 @@
     font-family: Artofsecret;
     src: url("Artofsecret-mixedorganized.otf") format("opentype");
 }
+@font-face {font-family: Helvetica
+src: url("HelveNeuBolOut");
+}
 
 body {
+    height: 100%;
     background-color: black;
+
 }
+
 
 .coolio {
     font-family: "Artofsecret";
@@ -30,4 +36,21 @@ body {
     width: 200px;
     border: 0px solid black;
     margin: 1px;
+}
+
+.linkclass {
+    font-family: "Helvetica";
+    font-size: 450px;
+    color: white;
+    background-color: ; 
+    display: inline;
+    padding: 100px;
+}
+
+.buttonclass {
+    width: 950px;
+    height: 200px;
+    font-family: "Helvetica";
+    font-size: 100px;
+    position: left: 400px;
 }
