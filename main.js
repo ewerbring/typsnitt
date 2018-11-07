@@ -51,7 +51,7 @@ function isKeyCodeNumber(keyCode) {
 }
 
 function isKeyCodeLetter(keyCode) {
-    var isNumber = keyCode >= 65 && keyCode <= 90 || keyCode == 32;
+    var isNumber = keyCode >= 65 && keyCode <= 90 || keyCode == 32 || keyCode == 190 || keyCode == 222 || keyCode == 186 || keyCode == 219;
 
     //var isNumber = keyCode = 32;
     //HÄR ÄR EN LURING!!!
@@ -123,7 +123,7 @@ function heightForCharacter(character) {
     var one = ['f', 'l', 'm', 'n', 's','x', 'z'];
     var negativeOne = ['b', 'c', 'd', 'e', 'g', 'p', 't', 'v'];
     var onePointFive = [];
-    var zero = ['q', 'r', 'w', 'u'];
+    var zero = ['q', 'r', 'w', 'u','.'];
 
     //lägg till höjd för siffror. 
 
