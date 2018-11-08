@@ -9,12 +9,12 @@ function toggleCssForText(cssName) {
 }
 
 function decreaseFontSize(){
-    fontSize = fontSize - 2;
+    fontSize = fontSize - 10;
 
 }
 
 function increaseFontSize(){
-    fontSize = fontSize + 2;
+    fontSize = fontSize + 10;
 }
 
 function check_multifile_logo(file) {
