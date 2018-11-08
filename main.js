@@ -7,7 +7,15 @@ var currentCss = "";
 function toggleCssForText(cssName) {
     currentCss = cssName;
 }
-;
+
+function decreaseFontSize(){
+    fontSize = fontSize - 2;
+
+}
+
+function increaseFontSize(){
+    fontSize = fontSize + 2;
+}
 
 function check_multifile_logo(file) {
     var extension = file.substr((file.lastIndexOf('.') + 1))
@@ -50,7 +58,7 @@ $(document).keyup(function(e) {
     //if it is a number, add corresponding image to site
     var container = document.querySelector(".coolio");
     var topMargin = getHeightForPreviousString(printedString);
-    elementToAdd.style.cssText = "display:inline; position:relative;top:" + topMargin + "px;";
+    elementToAdd.style.cssText = "display:inline; position:relative;top:" + topMargin + "px;font-size:" + fontSize +"px";
     container.appendChild(elementToAdd);
     //position said letter correctly
     console.log("pressed: " + e.key);
