@@ -15,9 +15,8 @@ body {
 
 .coolio {
     font-family: "Artofsecret";
-    font-size: 40px;
     color: lime;
-    background-color: ; 
+    background-color: violet; 
     display: inline;
     position: relative;
     word-wrap: break-word;
@@ -29,6 +28,22 @@ body {
 
 .blueCoolioText {
     color: blue;
+}
+
+.greenCoolioText {
+    color: blue;
+}
+
+.smallCoolioText {
+ font-size: 20px;
+}
+
+.mediumCoolioText {
+ font-size: 40px;
+}
+
+.largeCoolioText {
+ font-size: 80px;    
 }
 
 .imageCoolio {
@@ -54,3 +69,5 @@ body {
     font-size: 100px;
     position: left: 400px;
 }
+ 
+

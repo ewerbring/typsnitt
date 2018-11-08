@@ -18,6 +18,8 @@ function check_multifile_logo(file) {
     }
 }
 
+
+
 $(document).keyup(function(e) {
     console.log();
     if (e.keyCode == 8) {
