@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="">
 
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -10,13 +11,7 @@
     <link rel="stylesheet" href="falconerstyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="main.js"></script>
-     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
     <style>
 body, html {
     height: 100%;
@@ -35,6 +30,9 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+
 </style>
 
 </head>
@@ -42,7 +40,54 @@ body, html {
 <body>
 
 
-  <button 
+<button class="collapsible">what is this</button>
+<div class="content">
+
+  <p>Cryptomenysis Patefacta is a book written by John Falconer in 1685 (1). In the book, Falconer explains a number of different code languages that can be used in script, speech and with hand gestures. On this website, you can use one of his languages, based on a Bi-literary Alphabet (2). It is modified so that all letters get a direction based on their phonetic groupings in the alphabet. All the letters that are pronounced similarly have the same direction (3). 
+
+    <br>
+     <br>
+  <a class="linkclass"
+
+    href="http://cryptiana.web.fc2.com/code/falconer_e.htm" target="_blank" onclick="window.open('http://cryptiana.web.fc2.com/code/falconer_e.htm', 'popup', 'height=800, width=600'); return false;">1</a>
+
+    <a class="linkclass"
+
+    href="https://archive.org/details/cryptomenysispat00falc/page/78" target="_blank" onclick="window.open('https://archive.org/details/cryptomenysispat00falc/page/78', 'popup', 'height=800, width=600'); return false;">2</a>
+
+    <a class="linkclass"
+
+    href="key2_direction" target="_blank" onclick="window.open('key2.jpg', 'popup', 'height=800, width=600'); return false;">3</a>
+
+   <!--
+    <a class="linkclass"
+
+    href="key3_images" target="_blank" onclick="window.open('key3.jpg  ', 'popup', 'height=800, width=600'); return false;">4</a>
+
+    -->
+  </p>
+</div>
+<button class="collapsible">start typing</button>
+<div class="content2">
+  <p>Typing knowing the text will not be read is liberating. The purpose of this website is to allow users to write stupid things that never need to be read unless you want it to be. Be aware that some letters have a steep angle upwards or downwards. If you are typing outside the window you can navigate back by using "=" to go up and "+" to go down.</p>
+</div>
+<button class="collapsible">send it away</button>
+
+
+<div class="content3">
+  <p>If the user would want to translate it into a text that is more readable there are a few different ways. One can decipher it with the specimen in Falconer's book. Or, the user can look at the console log in developer tools. However, the easiest way is to copy the text and paste it into a text editor. 
+
+If the user would want to print this there is a possibility to export it as a pdf.</p>
+</div>
+
+<button class="collapsible">controllers</button>
+
+
+<div class="controllers">
+
+  <p>These controllers are here to give the user some control over the visual outcome of their writing. If they want, they can change color to split up paragraphs or to show that they are writing in a different language. They can change size to pronounce something a bit louder or to show that they are whispering.</p>
+
+ <button 
     class="buttonclass"
     onclick="toggleCssForText('redCoolioText')">type in red</button>
    
@@ -65,6 +110,25 @@ body, html {
     <button 
     class="buttonclass"
     onclick="increaseFontSize()">type larger</button>
+
+    <button 
+    class="buttonclass"
+    onclick="toggleCssForText('helveticaCoolio')">type in helvetica</button>
+</div>
+
+
+
+
+
+ 
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+ 
    
         <br>
         <br>
@@ -72,21 +136,7 @@ body, html {
         <br>
         <br>
 
-    <a class="linkclass"
 
-    href="http://cryptiana.web.fc2.com/code/falconer_e.htm" target="_blank" onclick="window.open('http://cryptiana.web.fc2.com/code/falconer_e.htm', 'popup', 'height=800, width=600'); return false;">1</a>
-
-    <a class="linkclass"
-
-    href="https://archive.org/details/cryptomenysispat00falc/page/86" target="_blank" onclick="window.open('https://archive.org/details/cryptomenysispat00falc/page/86', 'popup', 'height=800, width=600'); return false;">2</a>
-
-    <a class="linkclass"
-
-    href="key2_direction" target="_blank" onclick="window.open('key2.jpg', 'popup', 'height=800, width=600'); return false;">3</a>
-
-    <a class="linkclass"
-
-    href="key3_images" target="_blank" onclick="window.open('key3.jpg  ', 'popup', 'height=800, width=600'); return false;">4</a>
 
   
     <br>
@@ -107,4 +157,21 @@ body, html {
 
     <div class="coolio"></div>
 
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
 </body>

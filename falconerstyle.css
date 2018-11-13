@@ -5,13 +5,146 @@
 @font-face {font-family: Helvetica
 src: url("HelveNeuBolOut");
 }
+@font-face {font-family: Favorit
+src: url("Favorit_Regular.otf");
+}
+
+@font-face {font-family: Favorit2
+src: url("Favorit-Regular_Lining.otf");
+}
+
+
 
 body {
     height: 100%;
-    background-color: black;
+    background-color: black ;
 
 }
 
+.collapsible {
+  background-color: lime;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  width: 25%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 40px;
+  float: left;
+    font-family: "Favorit"
+
+}
+
+
+.active, .collapsible:hover {
+  background-color: black;
+
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+   float: right;
+}
+
+.content {
+  padding: 3px;
+  max-height: 0;
+  color: magenta;
+  width: 20%;
+  overflow: hidden;
+  transition: max-height 0s ease-out;
+  background-color: white;
+  border: 5px solid lime;
+   position: absolute;
+    left: 0%   ;
+    top: 55px;
+  font-size: 20px;
+  font-weight: ;
+  font-family: "Favorit"
+
+  }
+
+.content2 {
+  padding: 3px;
+  max-height: 0;
+  color: magenta;
+  width: 20%;
+  overflow: hidden;
+  transition: max-height 0s ease-out;
+  background-color: white;
+  border: 5px solid lime;
+   position: absolute;
+    left: 25%   ;
+    top: 55px;
+  font-size: 20px;
+  font-weight: ;
+ font-family: "Favorit"
+}
+
+.content3 {
+ padding: 3px;
+  max-height: 0;
+  color: magenta;
+  width: 20%;
+  overflow: hidden;
+  transition: max-height 0s ease-out;
+  background-color: white;
+  border: 5px solid lime;
+   position: absolute;
+    left: 50%   ;
+    top: 55px;
+  font-size: 20px;
+  font-weight: ;
+ font-family: "Favorit"
+}
+
+.content4 {
+ padding: 10px;
+  max-height: 0;
+  color: magenta;
+  width: 20%;
+  overflow: hidden;
+  transition: max-height 0s ease-out;
+  background-color: white;
+  border: 5px solid lime;
+   position: absolute;
+    left: 75%   ;
+    top: 55px;
+  font-size: 20px;
+  font-weight: ;
+  font-family: "Helvetica"
+
+
+  
+}
+.controllers {
+  padding: 3px;
+  max-height: 0;
+  color: magenta;
+  width: 20%;
+  overflow: hidden;
+  transition: max-height 0s ease-out;
+  background-color: white;
+  border: 5px solid lime;
+   position: absolute;
+    left: 75%   ;
+    top: 55px;
+  font-size: 20px;
+  font-weight: ;
+ font-family: "Favorit";
+    z-index: 8;
+
+  
+}
 
 .coolio {
     font-family: "Artofsecret";
@@ -20,7 +153,7 @@ body {
     display: inline;
     position: relative;
     word-wrap: break-word;
-    z-index: 4;
+    z-index: 7;
 }
 
 .redCoolioText {
@@ -35,45 +168,50 @@ body {
     color: lime;
 }
 
-/*.smallCoolioText {
- font-size: 20px;
+.helveticaCoolio{
+    font-family: "Helvetica";
 }
-
-.mediumCoolioText {
- font-size: 40px;
-}
-
-.largeCoolioText {
- font-size: 80px;    
-}*/
 
 .imageCoolio {
-    height: 200px;
-    width: 200px;
+    height: 20px;
+    width: 20px;
     border: 0px solid black;
     margin: 1px;
 }
 
 .linkclass {
-    font-family: "Helvetica";
-    font-size: 450px;
-    color: white;
+     font-family: "Favorit";
+    font-size: 50px;
+    color: magenta;
     background-color: ; 
     display: inline;
-    padding: 100px;
+    padding: 15px;
     position: relative;
     z-index: 5;
 
 }
 
 .buttonclass {
-    width: 950px;
-    height: 200px;
+    width: 100%;
+    height: 60px;
+    color: white;
+    text-align: left;
+    background-color: lime;
     font-family: "Helvetica";
-    font-size: 100px;
+      font-weight: bold;
+    font-size: 20px;
     position: left: 400px;
     position: relative;
-    z-index: 6;
+    z-index: 8;
 }
- 
+
+
+ .cities {
+    font-family: "Helvetica";
+    color: lime;
+    display: inline;
+    font-size: 100px;
+    position: relative;
+    word-wrap: break-word;
+}
 

@@ -1,6 +1,6 @@
 var printedString = "";
 
-var fontSize = 40;
+var fontSize = 10;
 
 var currentCss = "";
 
@@ -9,12 +9,12 @@ function toggleCssForText(cssName) {
 }
 
 function decreaseFontSize(){
-    fontSize = fontSize - 10;
+    fontSize = fontSize - 5;
 
 }
 
 function increaseFontSize(){
-    fontSize = fontSize + 10;
+    fontSize = fontSize + 5;
 }
 
 function check_multifile_logo(file) {
