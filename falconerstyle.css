@@ -13,7 +13,9 @@ src: url("Favorit_Regular.otf");
 src: url("Favorit-Regular_Lining.otf");
 }
 
-
+@font-face {font-family: Cooperblack
+src: url("CoopeBla");
+}
 
 body {
     height: 100%;
@@ -22,23 +24,28 @@ body {
 }
 
 .collapsible {
-  background-color: lime;
+padding-left: 20px;
+padding-top:5px; 
+padding-right:5px;
+padding-bottom:5px ;
+  background-color: black;
   color: white;
   cursor: pointer;
-  padding: 5px;
   width: 25%;
   border: none;
   text-align: left;
   outline: none;
   font-size: 40px;
   float: left;
-    font-family: "Favorit"
+    font-family: "Favorit";
+ 
 
 }
 
 
 .active, .collapsible:hover {
   background-color: black;
+
 
 }
 
@@ -48,100 +55,92 @@ body {
   font-weight: bold;
   float: right;
   margin-left: 5px;
+ 
+
 }
 
 .active:after {
   content: "\2212";
    float: right;
+
 }
 
 .content {
-  padding: 3px;
+padding-left: 20px;
+  padding-right: 20px;
+
   max-height: 0;
   color: magenta;
   width: 20%;
   overflow: hidden;
   transition: max-height 0s ease-out;
   background-color: white;
-  border: 5px solid lime;
+
    position: absolute;
     left: 0%   ;
-    top: 55px;
+    top: 60px;
   font-size: 20px;
   font-weight: ;
-  font-family: "Favorit"
+  font-family: "Favorit";
+
 
   }
 
 .content2 {
-  padding: 3px;
+ 
+  padding-left: 20px;
+  padding-right: 20px;
   max-height: 0;
   color: magenta;
   width: 20%;
   overflow: hidden;
   transition: max-height 0s ease-out;
   background-color: white;
-  border: 5px solid lime;
+
    position: absolute;
     left: 25%   ;
-    top: 55px;
+   top: 60px;
   font-size: 20px;
   font-weight: ;
- font-family: "Favorit"
+ font-family: "Favorit";
 }
 
 .content3 {
- padding: 3px;
+
+  padding-left: 20px;
+  padding-right: 20px;
   max-height: 0;
   color: magenta;
   width: 20%;
   overflow: hidden;
   transition: max-height 0s ease-out;
   background-color: white;
-  border: 5px solid lime;
+  
    position: absolute;
     left: 50%   ;
-    top: 55px;
+   top: 60px;
   font-size: 20px;
   font-weight: ;
  font-family: "Favorit"
-}
-
-.content4 {
- padding: 10px;
-  max-height: 0;
-  color: magenta;
-  width: 20%;
-  overflow: hidden;
-  transition: max-height 0s ease-out;
-  background-color: white;
-  border: 5px solid lime;
-   position: absolute;
-    left: 75%   ;
-    top: 55px;
-  font-size: 20px;
-  font-weight: ;
-  font-family: "Helvetica"
-
 
   
 }
 .controllers {
-  padding: 3px;
+
+  padding-left: 20px;
+  padding-right: 20px;
   max-height: 0;
   color: magenta;
   width: 20%;
   overflow: hidden;
   transition: max-height 0s ease-out;
   background-color: white;
-  border: 5px solid lime;
    position: absolute;
     left: 75%   ;
-    top: 55px;
+   top: 60px;
   font-size: 20px;
   font-weight: ;
  font-family: "Favorit";
-    z-index: 8;
 
   
 }
@@ -172,6 +171,11 @@ body {
     font-family: "Helvetica";
 }
 
+.cooperCoolio{
+    font-family: "Cooperblack";
+    font-weight: bold;
+}
+
 .imageCoolio {
     height: 20px;
     width: 20px;
@@ -196,9 +200,9 @@ body {
     height: 60px;
     color: white;
     text-align: left;
-    background-color: lime;
-    font-family: "Helvetica";
-      font-weight: bold;
+    background-color: black;
+    font-family: "Favorit";
+      
     font-size: 20px;
     position: left: 400px;
     position: relative;
