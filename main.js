@@ -1,6 +1,6 @@
 var printedString = "";
 
-var fontSize = 10;
+var fontSize = 20;
 
 var currentCss = "";
 
@@ -77,7 +77,8 @@ function isKeyCodeLetter(keyCode) {
     || keyCode == 222 
     || keyCode == 186 
     || keyCode == 187
-    || keyCode == 107;
+    || keyCode == 107
+    || keyCode == 63;
 
     //var isNumber = keyCode = 32;
     //HÄR ÄR EN LURING!!!
@@ -150,8 +151,8 @@ function heightForCharacter(character) {
     var negativeOne = ['b', 'c', 'd', 'e', 'g', 'p', 't', 'v'];
     var onePointFive = [];
     var zero = ['q', 'r', 'w', 'u','.'];
-    var negativeJump = ['+'];
-    var positiveJump = ['='];
+    var negativeJump = ['+',];
+    var positiveJump = ['=','?'];
 
     //lägg till höjd för siffror. 
 

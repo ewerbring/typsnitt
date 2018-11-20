@@ -7,11 +7,9 @@ src: url("HelveNeuBolOut");
 }
 @font-face {font-family: Favorit
 src: url("Favorit_Regular.otf");
+
 }
 
-@font-face {font-family: Favorit2
-src: url("Favorit-Regular_Lining.otf");
-}
 
 @font-face {font-family: Cooperblack
 src: url("CoopeBla");
@@ -19,7 +17,9 @@ src: url("CoopeBla");
 
 body {
     height: 100%;
-    background-color: black ;
+    background-color: #BF3EFF ;
+
+
 
 }
 
@@ -31,7 +31,7 @@ padding-bottom:5px ;
   background-color: black;
   color: white;
   cursor: pointer;
-  width: 25%;
+  width: 20%;
   border: none;
   text-align: left;
   outline: none;
@@ -63,6 +63,7 @@ padding-bottom:5px ;
   content: "\2212";
    float: right;
 
+
 }
 
 .content {
@@ -71,7 +72,7 @@ padding-left: 20px;
 
   max-height: 0;
   color: magenta;
-  width: 20%;
+  width: 16%;
   overflow: hidden;
   transition: max-height 0s ease-out;
   background-color: white;
@@ -92,17 +93,18 @@ padding-left: 20px;
   padding-right: 20px;
   max-height: 0;
   color: magenta;
-  width: 20%;
+  width: 16%;
   overflow: hidden;
   transition: max-height 0s ease-out;
   background-color: white;
 
    position: absolute;
-    left: 25%   ;
+    left: 20%   ;
    top: 60px;
   font-size: 20px;
   font-weight: ;
  font-family: "Favorit";
+ z-index: 0;
 }
 
 .content3 {
@@ -111,13 +113,13 @@ padding-left: 20px;
   padding-right: 20px;
   max-height: 0;
   color: magenta;
-  width: 20%;
+  width: 16%;
   overflow: hidden;
   transition: max-height 0s ease-out;
   background-color: white;
   
    position: absolute;
-    left: 50%   ;
+    left: 40%   ;
    top: 60px;
   font-size: 20px;
   font-weight: ;
@@ -136,7 +138,7 @@ padding-left: 20px;
   transition: max-height 0s ease-out;
   background-color: white;
    position: absolute;
-    left: 75%   ;
+    left: 60%   ;
    top: 60px;
   font-size: 20px;
   font-weight: ;
@@ -145,14 +147,16 @@ padding-left: 20px;
   
 }
 
+
+
 .coolio {
     font-family: "Artofsecret";
-    color: lime;
+    color: #FFFF00;
     background-color: ; 
     display: inline;
     position: relative;
     word-wrap: break-word;
-    z-index: 7;
+    z-index: 7; 
 }
 
 .redCoolioText {
@@ -169,6 +173,7 @@ padding-left: 20px;
 
 .helveticaCoolio{
     font-family: "Helvetica";
+    font-weight: medium;
 }
 
 .cooperCoolio{
@@ -185,11 +190,11 @@ padding-left: 20px;
 
 .linkclass {
      font-family: "Favorit";
-    font-size: 50px;
+    font-size: 20px;
     color: magenta;
     background-color: ; 
     display: inline;
-    padding: 15px;
+    padding: 0px;
     position: relative;
     z-index: 5;
 
@@ -207,6 +212,40 @@ padding-left: 20px;
     position: left: 400px;
     position: relative;
     z-index: 8;
+}
+
+.textfield {
+
+  padding-left: 20px;
+  padding-right: 20px;
+  max-height: 0;
+  color: magenta;
+  width: 55%;
+  overflow: hidden;
+  transition: max-height 0s ease-out;
+  background-color: ;
+   position: absolute;
+    left: 20%   ;
+   top: 60px;
+  font-size: 20px;
+  font-weight: ;
+ font-family: "Favorit";
+
+  
+}
+
+.buttonclasssecond {
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: left;
+    background-color: black;
+    font-family: "Favorit";
+      
+    font-size: 20px;
+    position: left: 400px;
+    position: relative;
+    z-index: 1;
 }
 
 
