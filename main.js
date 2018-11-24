@@ -41,7 +41,6 @@ $(document).keyup(function(e) {
         dealWithBackspace();
     }
     
-
     //hitta textarea
     var textArea  = document.getElementById("froala-editor");
     //uppdatera text i textarea till printedstring
@@ -50,7 +49,19 @@ $(document).keyup(function(e) {
 });
 
 function dealWithBackspace(){
-    console.log("want to deal with backspace");
+    if(printedString.length == 0){
+        return;
+    }
+
+    //hitta container
+    var container = document.querySelector(".coolio");
+    //ta bort siste elementet i container
+    var allChildNodes = container.childNodes;
+    var indexOfLastNode = allChildNodes.length - 1;
+    allChildNodes[indexOfLastNode].remove();
+
+    printedString = printedString.substr(0, printedString.length - 1);
+
 }
 
 function addLetterOrNumber(keyCodeIsNumber, keyCodeIsLetter, e){
