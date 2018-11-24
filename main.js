@@ -63,6 +63,12 @@ $(document).keyup(function(e) {
     //position said letter correctly
     console.log("pressed: " + e.key);
     printedString = printedString + e.key;
+
+    //hitta textarea
+    var textArea  = document.getElementById("froala-editor");
+    //uppdatera text i textarea till printedstring
+    textArea.value = printedString;
+
 });
 
 function isKeyCodeNumber(keyCode) {
