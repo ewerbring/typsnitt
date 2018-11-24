@@ -29,17 +29,32 @@ function check_multifile_logo(file) {
 
 
 $(document).keyup(function(e) {
-    console.log();
-    if (e.keyCode == 8) {
-        console.log();
-        return;
-    }
-
     //when key is pressed
     //check if its a letter or a number
 
     var keyCodeIsNumber = isKeyCodeNumber(e.keyCode);
     var keyCodeIsLetter = isKeyCodeLetter(e.keyCode);
+    var keyCodeIsBackspace = e.keyCode == 8;
+    if(keyCodeIsLetter  || keyCodeIsNumber){
+        addLetterOrNumber(keyCodeIsNumber, keyCodeIsLetter, e);
+    } else if(keyCodeIsBackspace) {
+        dealWithBackspace();
+    }
+    
+
+    //hitta textarea
+    var textArea  = document.getElementById("froala-editor");
+    //uppdatera text i textarea till printedstring
+    textArea.value = printedString;
+
+});
+
+function dealWithBackspace(){
+    console.log("want to deal with backspace");
+}
+
+function addLetterOrNumber(keyCodeIsNumber, keyCodeIsLetter, e){
+
     //if its a letter, add new letter to site
     //if it s anumber, add new image
     var elementToAdd;
@@ -63,13 +78,7 @@ $(document).keyup(function(e) {
     //position said letter correctly
     console.log("pressed: " + e.key);
     printedString = printedString + e.key;
-
-    //hitta textarea
-    var textArea  = document.getElementById("froala-editor");
-    //uppdatera text i textarea till printedstring
-    textArea.value = printedString;
-
-});
+}
 
 function isKeyCodeNumber(keyCode) {
     var isNumber = keyCode >= 48 && keyCode <= 57;
