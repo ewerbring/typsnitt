@@ -11,26 +11,15 @@
     <link rel="stylesheet" href="falconerstyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="main.js"></script>
-    
+  
 
     <style>
 body, html {
     height: 100%;
     margin: 0;
+    background-color: #BF3EFF ;
 }
 
-.bg {
-    /* The image used */
-    background-image: url("giphy.gif");
-
-    /* Full height */
-    height: 100%; 
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 
 
@@ -46,14 +35,14 @@ body, html {
 
 
 <div class="content">
-    <br>
+    
 <p>Start typing right away. The text that will appear on this page will be with a cryptic script, and it will be very hard to read. If you would like to change the visuals of it you can use the controllers to do so. Typing in cryptic - almost unreadable script can be very liberating. Try it out for a while. If you would like to translate your writings into something readable when you are done there are a few ways to do so. 
  <br><br> The text will go up and down all over the page. If you are ending up outside the screen use the key "=" to navigate up again and "+" to jump down. </p>
   
 </div>
 <button class="collapsible">what is this</button>
 <div class="content2">
-      <br>
+   
    <p>Cryptomenysis Patefacta is a book written by  
 
     <a class="linkclass"
@@ -75,7 +64,7 @@ body, html {
 
 
 <div class="content3">
-      <br>
+
   <p>The text can be shared or kept secret – it is up to the user to decide. There are a number of different ways of deciphering the text. It can be unlocked with the original specimen found in Falconer's book. It can be read in the developers control log or it can be copied here on the webpage and pasted into any text editor. 
  <br><br>
 To print, press this link to export the page as a flattened PDF. </p>
@@ -85,7 +74,7 @@ To print, press this link to export the page as a flattened PDF. </p>
 
 
 <div class="controllers">
-  <br>
+
   <p></p>
 
  <button 
@@ -130,7 +119,7 @@ To print, press this link to export the page as a flattened PDF. </p>
 
 </div>
 
-<button class="collapsible">decipher here</button>
+<button class="collapsible">decipher</button>
 
 
 <div class="textfield">
@@ -151,8 +140,8 @@ To print, press this link to export the page as a flattened PDF. </p>
       <textarea 
  class="buttonclasssecond"
  
- id="froala-editor"></textarea>
-   <br>  <br>  <br>  <br>  <br>  <br>  <br> <br>  <br>  <br>  <br>  <br>  <br>  <br>    <br>  <br>  <br>  <br>  <br>  <br>  <br> <br>  <br>  <br>  <br>  <br>  <br>  <br>
+ id="froala-editor">text här</textarea>
+   <br>  <br>  <br>  <br>  <br>  <br>  <br> <br>  <br>  <br>  <br>  <br>  <br>  <br>    <br>  <br>  <br>  <br>  <br> <br>  <br> <br>  <br>  <br>  <br>  <br>  <br>  <br>
     <br>  <br>  <br>  <br>  <br>  <br>  <br> <br>  <br>  <br>  <br>  <br>  <br>  <br>
     <br>  <br>  <br>  <br>  <br>  <br>  <br> <br>  <br>  <br>  <br>  <br>  <br>  <br>
    <br>  <br>  <br>  <br>  <br>  <br>  <br> <br>  <br>  <br>  <br>  <br>  <br>  <br>
@@ -162,8 +151,12 @@ To print, press this link to export the page as a flattened PDF. </p>
 
 </div>
 
+<!--
+<button onclick="saveImage()">Click me</button>
 
+<p id="capture"></p>
 
+-->
     <br>
     <br>
     <br>
@@ -184,19 +177,17 @@ To print, press this link to export the page as a flattened PDF. </p>
     <br>
     <br>
     <br> 
-
 
 
     <div class="coolio"></div>
 
 
-
 <script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
+    for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
     if (content.style.maxHeight){
@@ -204,14 +195,16 @@ for (i = 0; i < coll.length; i++) {
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
     } 
-  });
+    });
 }
 </script>
-  <script>
-  $(function() {
+
+<script>
+    $(function() {
     $('textarea#froala-editor').froalaEditor()
-  });
+    });
 </script>
 
+  <script src="html2canvas.js"></script>
 
 </body>
