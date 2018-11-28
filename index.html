@@ -30,6 +30,7 @@ body, html {
 <body>
 
 
+
 <button class="collapsible">start typing</button>
 
 
@@ -79,7 +80,7 @@ To print, press this link to export the page as a flattened PDF. </p>
 
  <button 
     class="buttonclass"
-    onclick="toggleCssForText('redCoolioText')">type in red</button>
+    onclick="toggleCssForText('redCoolioText')">type in white</button>
    
     <button 
     class="buttonclass"
@@ -87,7 +88,7 @@ To print, press this link to export the page as a flattened PDF. </p>
 
     <button 
     class="buttonclass"
-    onclick="toggleCssForText('greenCoolioText')">type in yellow</button>
+    onclick="toggleCssForText('yellowCoolioText')">type in yellow</button>
    
      <button 
     class="buttonclass"
@@ -140,8 +141,8 @@ To print, press this link to export the page as a flattened PDF. </p>
       <textarea 
  class="buttonclasssecond"
  
- id="froala-editor">text här</textarea>
-   <br>  <br>  <br>  <br>  <br>  <br>  <br> <br>  <br>  <br>  <br>  <br>  <br>  <br>    <br>  <br>  <br>  <br>  <br> <br>  <br> <br>  <br>  <br>  <br>  <br>  <br>  <br>
+ id="froala-editor"></textarea>there is a story in the numbers
+   <br><br><br><br><br><br><br><br><br><br><br><br>  <br>  <br>    <br>  <br>  <br>  <br>  <br> <br>  <br> <br>  <br>  <br>  <br>  <br>  <br>  <br>
     <br>  <br>  <br>  <br>  <br>  <br>  <br> <br>  <br>  <br>  <br>  <br>  <br>  <br>
     <br>  <br>  <br>  <br>  <br>  <br>  <br> <br>  <br>  <br>  <br>  <br>  <br>  <br>
    <br>  <br>  <br>  <br>  <br>  <br>  <br> <br>  <br>  <br>  <br>  <br>  <br>  <br>
@@ -180,6 +181,21 @@ To print, press this link to export the page as a flattened PDF. </p>
 
 
     <div class="coolio"></div>
+<div imgsource="1.GIF" 
+class="imageCoolio">
+</div>
+
+
+
+
+    <div 
+style = " font-family: Helvetica; font-size: 30px; color: blue; width: 400px; height: 110px; background-color: ; border: 8px solid red; position: absolute;" 
+
+id = "mover1">
+    
+About 20 million units sold every day
+100 billion pens sold in 2004.  
+</div>
 
 
 <script>
@@ -206,5 +222,27 @@ To print, press this link to export the page as a flattened PDF. </p>
 </script>
 
   <script src="html2canvas.js"></script>
+
+<script> 
+   $("#mover1").hide();
+</script>
+
+
+<script> 
+
+    $(".imageCoolio").on("mouseover", function () {
+        $("#mover1").show();
+    }).on("mouseleave", function () {
+        $("#mover1").hide();
+    });
+
+
+    $(document).on('mousemove', function(e){
+    $('#mover1').css({
+       left:  e.pageX +5,
+       top:   e.pageY +5
+    });
+      });
+</script>
 
 </body>

@@ -130,7 +130,7 @@ function elementForNumber(e) {
   
     //bestäm rätt source file baserat på rätt knapp.
 
-    newImg.src = e.key + ".JPG";
+    newImg.src = e.key + ".GIF";
     newImg.className = "imageCoolio";
     console.log(newImg);
     return newImg;

@@ -161,7 +161,7 @@ padding-left: 20px;
 }
 
 .redCoolioText {
-    color: red;
+    color: white;
 }
 
 .blueCoolioText {
@@ -183,8 +183,7 @@ padding-left: 20px;
 }
 
 .imageCoolio {
-    height: 90px;
-    width: 90px;
+    height: 110px;
     border: 0px solid black;
     margin: 1px;
 }
