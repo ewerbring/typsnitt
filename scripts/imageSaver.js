@@ -8,7 +8,7 @@ function SaveCanvas(){
    html2canvas($("#allContent"), {
       allowTaint: true,
       onrendered: function(canvas) {
-        Canvas2Image.saveAsPNG(canvas);
+        saveAs(canvas.toDataURL(), 'canvas.png');
       }
     });
 }
