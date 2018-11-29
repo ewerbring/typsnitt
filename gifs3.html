@@ -65,7 +65,7 @@ body, html {
 <div class="content3">
 
   <p>
-Press this link to export the page as a flattened JPEG. Before exporting, choose if to include deciphered message or not. Share the message with the creators via <a style= "color: magenta;" href="mailto:cewerb01@risd.edu?Subject=coded%20message" target="_top">email</a> and you will recieve a link to a collection of coded messages from different users.</p>
+Press this link to export the page as a flattened JPEG. Before exporting, choose if to include the easy deciphering tool or to only show the code language. You will be directed to an email to share your story with me.</p>
 </div>
 
 <button class="collapsible">controllers</button>
@@ -139,7 +139,6 @@ Press this link to export the page as a flattened JPEG. Before exporting, choose
  class="buttonclasssecond"
  
  id="froala-editor"></textarea>
-
    <br><br><br><br><br><br><br><br><br><br><br><br>  <br>  <br>    <br>  <br>  <br>  <br>  <br> <br>  <br> <br>  <br>  <br>  <br>  <br>  <br>  <br>
     <br>  <br>  <br>  <br>  <br>  <br>  <br> <br>  <br>  <br>  <br>  <br>  <br>  <br>
     <br>  <br>  <br>  <br>  <br>  <br>  <br> <br>  <br>  <br>  <br>  <br>  <br>  <br>
@@ -156,76 +155,34 @@ Press this link to export the page as a flattened JPEG. Before exporting, choose
 <p id="capture"></p>
 
 -->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br> 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br> 
 
 
-    <div class="coolio"></div>
-     <div 
+
+
+
+     <div class="anglebox">
+       
+
+      <p>A phonetic grouping means that all letter that has a similar sound when being pronounced are grouped in the alphabet. <br>When giving each group a different direction, the direction of a sentence gan give an indication on how it sounds. 
+        <br>
+          <br>
+        <img src="riktning2.png" width="95%"  alt="Norway" style="position; left: 40px;">
+</p> 
+     </div>
+   <div 
 style = " font-family: Favorit; font-size: 20px; color: white; width: 250px; height: 30px; background-color: black ; padding: 5px; border: 8px solid black; position: absolute;" 
 
 id = "mover1">
     
-This code language was written in 1685
-</div>
-
-   <div 
-style = " font-family: Favorit; font-size: 20px; color: white; width: 370px; height: 30px; background-color: black; padding: 5px; border: 8px solid black; position: absolute;" 
-
-id = "mover2">
-    This code language was written in 1685
-
-</div>
-
-
-   <div 
-style = " font-family: Favorit; font-size: 20px; color: white; width: 230px; height: 30px; background-color: black; padding: 5px; border: 8px solid black; position: absolute;" 
-
-id = "mover3">
 The angle has a meaning
-
-
 </div>
 
 
-   <div 
-style = " font-family: Favorit; font-size: 20px; color: white; width: 290px; height: 30px; background-color: black; padding: 5px; border: 8px solid black; position: absolute;" 
-
-id = "mover4">
-    
-There is a story in the numbers  
-</div>
 
 
-<!--
-<a class="linkclass"
+<a href="index.html"><img id = "question" src="X.png" height="15px" class="xmark2" alt="Norway"><a>
 
-    href="https://archive.org/details/cryptomenysispat00falc/page/78" target="_blank" onclick="window.open('https://archive.org/details/cryptomenysispat00falc/page/78', 'popup', 'height=800, width=600'); return false;">Bi-literary Alphabet</a>
--->
 
-<a href="gifs3.html"><img id = "question" src="q.png" class="question3" alt="Norway"></a>
-
-<a href="https://archive.org/details/cryptomenysispat00falc/page/78" >   <img id = "question" src="q.png" class="question"></a>
-
-<a href="gifs.html"><img id = "question" src="q.png" class="question4" alt="Norway"></a>
 
  
 
@@ -246,14 +203,17 @@ There is a story in the numbers
 }
 </script>
 
+<script>
+    $(function() {
+    $('textarea#froala-editor').froalaEditor()
+    });
+</script>
 
   <script src="html2canvas.js"></script>
 
 <script> 
    $("#mover1").hide();
-    $("#mover2").hide();
-    $("#mover3").hide();
-    $("#mover4").hide();
+      $("#mover2").hide();
 </script>
 
 <script> 
@@ -281,41 +241,10 @@ There is a story in the numbers
 
     $(document).on('mousemove', function(e){
     $('#mover2').css({
-       left:  e.pageX -400,
+       left:  e.pageX -340,
        top:   e.pageY -70
     });
       });
-
-
-        $(".question3").on("mouseover", function () {
-        $("#mover3").show();
-    }).on("mouseleave", function () {
-        $("#mover3").hide();
-    });
-
-
-    $(document).on('mousemove', function(e){
-    $('#mover3').css({
-       left:  e.pageX -260,
-       top:   e.pageY -70
-    });
-      });
-
-
-        $(".question4").on("mouseover", function () {
-        $("#mover4").show();
-    }).on("mouseleave", function () {
-        $("#mover4").hide();
-    });
-
-
-    $(document).on('mousemove', function(e){
-    $('#mover4').css({
-       left:  e.pageX -320,
-       top:   e.pageY -70
-    });
-      });
-
 </script>
 
 

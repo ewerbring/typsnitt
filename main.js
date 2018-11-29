@@ -106,6 +106,7 @@ function isKeyCodeLetter(keyCode) {
     || keyCode == 186 
     || keyCode == 187
     || keyCode == 107
+    || keyCode == 44
     || keyCode == 63;
 
     //var isNumber = keyCode = 32;
@@ -132,6 +133,7 @@ function elementForNumber(e) {
 
     newImg.src = e.key + ".GIF";
     newImg.className = "imageCoolio";
+    newImg.setAttribute("id", "vitbox");
     console.log(newImg);
     return newImg;
 }
@@ -178,7 +180,7 @@ function heightForCharacter(character) {
     var one = ['f', 'l', 'm', 'n', 's','x', 'z'];
     var negativeOne = ['b', 'c', 'd', 'e', 'g', 'p', 't', 'v'];
     var onePointFive = [];
-    var zero = ['q', 'r', 'w', 'u','.'];
+    var zero = ['q', 'r', 'w', 'u','.',',','-'];
     var negativeJump = ['+',];
     var positiveJump = ['=','?'];
 

@@ -31,7 +31,7 @@ padding-bottom:5px ;
   background-color: black;
   color: white;
   cursor: pointer;
-  width: 20%;
+  width: 25%;
   border: none;
   text-align: left;
   outline: none;
@@ -60,6 +60,7 @@ padding-bottom:5px ;
 
 }
 
+
 .active:after {
   content: "\2212";
    float: right;
@@ -73,7 +74,7 @@ padding-left: 20px;
 
   max-height: 0;
   color: magenta;
-  width: 16%;
+  width: 20%;
   overflow: hidden;
   transition: max-height 0s ease-out;
   background-color: white;
@@ -94,13 +95,13 @@ padding-left: 20px;
   padding-right: 20px;
   max-height: 0;
   color: magenta;
-  width: 16%;
+  width: 20%;
   overflow: hidden;
   transition: max-height 0s ease-out;
   background-color: white;
 
    position: absolute;
-    left: 20%   ;
+    left: 25%   ;
    top: 60px;
   font-size: 20px;
   font-weight: ;
@@ -114,13 +115,13 @@ padding-left: 20px;
   padding-right: 20px;
   max-height: 0;
   color: magenta;
-  width: 16%;
+  width: 20%;
   overflow: hidden;
   transition: max-height 0s ease-out;
   background-color: white;
   
    position: absolute;
-    left: 40%   ;
+    left: 25%   ;
    top: 60px;
   font-size: 20px;
   font-weight: ;
@@ -134,12 +135,12 @@ padding-left: 20px;
   padding-right: 20px;
   max-height: 0;
   color: magenta;
-  width: 16%;
+  width: 20%;
   overflow: hidden;
   transition: max-height 0s ease-out;
   background-color: white;
    position: absolute;
-    left: 60%   ;
+    left: 50%   ;
    top: 60px;
   font-size: 20px;
   font-weight: ;
@@ -187,6 +188,62 @@ padding-left: 20px;
     border: 0px solid black;
     margin: 1px;
 }
+
+.question {
+    height: 50px;
+    position: absolute;
+    left: 95%;
+    top: 870px;
+      z-index: 10;
+}
+
+.question3 {
+    height: 50px;
+    position: absolute;
+    left: 95%;
+    top: 770px;
+      z-index: 10;
+}
+.question4 {
+    height: 50px;
+    position: absolute;
+    left: 95%;
+    top: 670px;
+      z-index: 10;
+}
+
+.xmark {
+    height: 25px;
+    position: absolute;
+    left: 95%;
+    top: 870px;
+      z-index: 10;
+}
+
+.xmark2 {
+    height: 25px;
+    position: absolute;
+    left: 95%;
+    top: 770px;
+      z-index: 10;
+}
+
+.xmark3 {
+    height: 25px;
+    position: absolute;
+    left: 95%;
+    top: 670px;
+      z-index: 10;
+}
+
+.question2 {
+    height: 50px;
+    position: absolute;
+    left: 2%;
+    top: 850px;
+      z-index: 10;
+}
+
 
 .linkclass {
      font-family: "Favorit";
@@ -261,3 +318,19 @@ padding-left: 20px;
     word-wrap: break-word;
 }
 
+
+.anglebox {
+width: 60%;
+
+position: absolute;
+left: 17%;
+top: 20%;
+background-color: white;
+  color: magenta;
+    font-size: 20px;
+  font-weight: ;
+ font-family: "Favorit";
+ padding-left: 20px;
+
+
+  }
