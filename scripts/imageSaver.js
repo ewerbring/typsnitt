@@ -8,7 +8,7 @@ function SaveCanvas(){
    html2canvas($("#allContent"), {
       allowTaint: true,
       onrendered: function(canvas) {
-        saveAs(canvas.toDataURL(), 'canvas.png');
+        saveAs(canvas.toDataURL(), 'falconscript.png');
       }
     });
 }
