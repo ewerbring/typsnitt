@@ -324,8 +324,24 @@ width: 60%;
 
 position: absolute;
 left: 17%;
-top: 20%;
-background-color: white;
+top: 30%;
+background-color: black;
+  color: magenta;
+    font-size: 20px;
+  font-weight: ;
+ font-family: "Favorit";
+ padding-left: 20px;
+
+
+  }
+
+  .anglebox2 {
+width: 60%;
+
+position: absolute;
+left: 17%;
+top: 35%;
+background-color: black;
   color: magenta;
     font-size: 20px;
   font-weight: ;
