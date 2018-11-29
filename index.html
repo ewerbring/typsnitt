@@ -12,8 +12,10 @@
     <link rel="shortcut icon" href="images/key.png" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="main.js"></script>
+    <script src="scripts/imageSaver.js"></script>
+    <script src="scripts/html2canvas.js"></script>
+    <script src="scripts/canvas2image.js"></script>
 
-  
 
     <style>
 body, html {
@@ -29,7 +31,7 @@ body, html {
 
 </head>
 
-<body>
+<body id="allContent">
 
 
 
@@ -179,6 +181,8 @@ Press this link to export the page as a flattened JPEG. Before exporting, choose
 
 
     <div class="coolio"></div>
+
+    <button onclick="SaveCanvas()">SPARA</button>
      <div 
 style = " font-family: Favorit; font-size: 20px; color: white; width: 250px; height: 30px; background-color: black ; padding: 5px; border: 8px solid black; position: absolute;" 
 
@@ -246,8 +250,6 @@ There is a story in the numbers
 }
 </script>
 
-
-  <script src="html2canvas.js"></script>
 
 <script> 
    $("#mover1").hide();
